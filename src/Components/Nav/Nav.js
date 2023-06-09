@@ -17,36 +17,36 @@ const Nav = () => {
       <nav>
         <ul>
           <li>
-            <Link to={"/dashboard"}>
+            <Link to={"/home"} title="Home">
               <img src={home} width="100%" alt="" />
             </Link>
           </li>
           <li>
-            <Link to={"/challenges"}>
+            <Link to={"/challenges"} title="Dashboard">
               {" "}
               <img src={dashboard} width="100%" alt="" />
             </Link>
           </li>
           <li>
-            <Link to={"/affirmations"}>
+            <Link to={"/affirmations"} title="wallet">
               {" "}
               <img src={wallet} width="100%" alt="" />
             </Link>
           </li>
           <li>
-            <Link to={"/reminder"}>
+            <Link to={"/reminder"} title="Reminder">
               {" "}
               <img src={inventory} width="100%" alt="" />
             </Link>
           </li>
           <li>
-            <Link to={"/calender"}>
+            <Link to={"/calender"} title="Calender">
               {" "}
               <img src={calender} width="100%" alt="" />
             </Link>
           </li>
           <li>
-            <Link to={"/support"}>
+            <Link to={"/support"} title="Order">
               {" "}
               <img src={order} width="100%" alt="" />
             </Link>
@@ -55,13 +55,13 @@ const Nav = () => {
         <div className="bottomProfile" style={{marginTop:"65px"}}>
           <ul>
             <li>
-              <Link to={"/guidelines"}>
+              <Link to={"/guidelines"} title="Setting">
                 {" "}
                 <img src={setting} width="100%" alt="" />
               </Link>
             </li>
             <li>
-              <Link to={"/sponsorship"}>
+              <Link to={"/sponsorship"} title="Logout">
                 {" "}
                 <img src={logout} width="100%" alt="" />
               </Link>

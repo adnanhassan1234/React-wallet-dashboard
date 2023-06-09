@@ -10,7 +10,7 @@ import facebook from "../../Images/login/facebook.png";
 const Signup = () => {
   const navigate = useNavigate();
   const signinToEmailHome = () => {
-    navigate("/dashboard");
+    navigate("/home");
   };
   const signUpPage = () => {
     navigate("/SignUp");

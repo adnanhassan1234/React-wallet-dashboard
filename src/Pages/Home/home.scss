@@ -1,0 +1,360 @@
+.home {
+    .title {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 33px;
+        line-height: 28px;
+        /* identical to box height, or 78% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.9px;
+
+        color: #1A1A1A;
+    }
+
+    .box {
+        border-radius: 4px;
+        background: #F2F2F2;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+        height: 503px;
+        position: relative;
+
+        .canlender_date {
+            position: absolute;
+            bottom: 0px;
+            left: 10px;
+            right: 10px;
+            padding: 14px;
+            // background-color: #fff;
+            color: #000;
+
+            span {
+                font-family: 'Rubik';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12.9973px;
+                line-height: 43px;
+
+                letter-spacing: 2px;
+
+                color: #222222;
+
+                mix-blend-mode: normal;
+                opacity: 0.5;
+            }
+        }
+
+        .check img {
+            margin-left: 23px;
+            cursor: pointer;
+        }
+    }
+
+    .des {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 22px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 1.8px;
+
+        color: #757575;
+    }
+}
+
+// dollor_content css
+.dollor_content {
+
+    background: #F2F2F2;
+    border-radius: 4px;
+    height: 296px;
+    position: relative;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    position: relative;
+
+    .dollor {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        right: 10px;
+        padding: 14px;
+
+        h4 {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 34px;
+            line-height: 28px;
+            /* identical to box height, or 82% */
+
+            letter-spacing: 1px;
+
+            color: #222222;
+        }
+
+        p {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11.9975px;
+            // line-height: 43px;
+            /* identical to box height, or 356% */
+
+            letter-spacing: 1px;
+
+            color: #222222;
+
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+    }
+
+}
+
+// dark mode css
+
+// dollor_content css
+.dark_mode {
+
+    background: #F2F2F2;
+    border-radius: 4px;
+    height: 189px;
+    position: relative;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    position: relative;
+
+    .dollor {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        right: 10px;
+        padding: 14px;
+
+
+    }
+
+    .enable p {
+        color: #222222;
+        font-family: 'Rubik';
+        font-size: 12px;
+    }
+
+}
+
+// desktop_percentage css
+.desktop_user {
+    border-radius: 4px;
+    background-color: #D54CDB;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+    height: 252px;
+
+    .desktop_percentage {
+        .bar {
+            float: right !important;
+        }
+
+    }
+
+    h3 {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 28px;
+        /* identical to box height, or 93% */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 1.5px;
+
+        color: #FFFFFF;
+    }
+
+    span {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11.9975px;
+        line-height: 43px;
+        /* identical to box height, or 356% */
+
+        letter-spacing: 1px;
+
+        color: #FFFFFF;
+
+        mix-blend-mode: normal;
+        opacity: 0.5
+    }
+}
+
+
+
+// sale_content css
+.sale_content {
+
+    background: #F2F2F2;
+    border-radius: 4px;
+    height: 234px;
+    position: relative;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    position: relative;
+
+    .dollor {
+        position: absolute;
+        bottom: 0px;
+        left: 10px;
+        right: 10px;
+        padding: 14px;
+
+        h4 {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 28px;
+            /* identical to box height, or 127% */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: 1.1px;
+
+            color: #1A1A1A;
+        }
+
+        p {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 11.9975px;
+            // line-height: 43px;
+            /* identical to box height, or 356% */
+
+            letter-spacing: 1px;
+
+            color: #222222;
+
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+    }
+
+    h3 {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11.9975px;
+        line-height: 43px;
+        /* identical to box height, or 356% */
+
+        letter-spacing: 1.5px;
+
+        color: #222222;
+
+        mix-blend-mode: normal;
+        opacity: 0.75;
+    }
+
+    span {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11.9975px;
+        line-height: 43px;
+        /* identical to box height, or 356% */
+
+        letter-spacing: 1px;
+
+        color: #222222;
+
+        mix-blend-mode: normal;
+        // opacity: 0.5
+    }
+}
+
+// line charts css
+.line_chart {
+    border-radius: 4px;
+    background: #F2F2F2;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    height: 362px;
+    position: relative;
+    .line{
+        margin-left: -50px !important;
+    }
+    @media (max-width: 767px) {
+        .line{
+            margin-left: -50px !important;
+            width: 320px !important;
+            right: 0 !important;
+        }
+      }
+    .circle {
+        img{
+            width: 32px;
+            height: 32px;
+        }
+        h5{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19.9958px;
+           
+            letter-spacing: 1px;
+            
+            color: #222222;
+        }
+        p{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 10.9977px;
+          
+            letter-spacing: 1px;
+            
+            color: #222222;
+            
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+    } 
+    .calender {
+        h6{
+            font-family: 'Rubik';
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: 1.1px;
+            color: #1A1A1A;
+        }
+        h5{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            display: flex;
+            align-items: center;
+            text-align: right;
+            letter-spacing: 1.35px;
+            color: #1A1A1A;
+        }
+    } 
+}
+.recharts-cartesian-axis-tick-value{
+    display: none !important;
+}
+
+// setting css
+.setting{
+    border-radius: 4px;
+    background: #F2F2F2;
+    box-shadow: 0px 10px 20px 0px #0000001A;
+    height: 123px;
+    position: relative;
+}

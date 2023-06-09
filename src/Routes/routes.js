@@ -1,5 +1,3 @@
-import LandingPage from "Pages/LandingPage";
-import Home from "Pages/Home/loadable";
 import User from "Pages/User/loadable";
 import Profile from "Pages/Profile/loadable";
 import NotFound from "Pages/NotFound/loadable";
@@ -21,7 +19,6 @@ import DatePicker from "Components/DatePicker";
 import Date from "Components/DatePicker";
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
-import Dashboard from "Pages/Dashboard";
 import Identity from "Pages/Affirmations/Identity";
 import CreateAffirmation from "Pages/Affirmations/CreateAffirmation";
 import Reminder from "Pages/Reminder";
@@ -33,13 +30,13 @@ import InventoryChallenges from "Pages/Challenges/InventoryChallengeButton";
 import EndUser from "Pages/User/EndUser";
 import Guidelines from "Pages/Guidelines";
 import Sponsorship from "Pages/Sponsorship";
-import SubAdmins from "Pages/User/SubAdmins";
 import Providers from "Pages/User/Providers";
 import ProviderUserProfile from "Pages/User/ProvidersPatient";
 import ProviderAccess from "Pages/User/ProviderAccess";
 import Support from "Pages/Support";
 import ProviderEndUserProfile from "Pages/ProviderEndUserProfile";
 import Login from "Layout/AuthLayout/login";
+import Home from "Pages/Home";
 
 const routes = [
   {
@@ -115,11 +112,7 @@ const routes = [
     layout: MainLayout,
     component: Sponsorship
   },
-  {
-    path: "/sub-admin",
-    layout: MainLayout,
-    component: SubAdmins
-  },
+
   {
     path: "/forgiveness-button",
     layout: MainLayout,
@@ -164,9 +157,9 @@ const routes = [
     component: Reminder
   },
   {
-    path: "/dashboard",
+    path: "/home",
     layout: MainLayout,
-    component: Dashboard
+    component: Home
   },
   {
     path: "/second-header",
