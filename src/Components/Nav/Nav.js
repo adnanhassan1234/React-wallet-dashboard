@@ -22,32 +22,27 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/challenges"} title="Dashboard">
-              {" "}
+            <Link to={"/dashboard"} title="Dashboard">
               <img src={dashboard} width="100%" alt="" />
             </Link>
           </li>
           <li>
-            <Link to={"/affirmations"} title="wallet">
-              {" "}
+            <Link to={"/wallet"} title="wallet">
               <img src={wallet} width="100%" alt="" />
             </Link>
           </li>
           <li>
             <Link to={"/reminder"} title="Reminder">
-              {" "}
               <img src={inventory} width="100%" alt="" />
             </Link>
           </li>
           <li>
             <Link to={"/calender"} title="Calender">
-              {" "}
               <img src={calender} width="100%" alt="" />
             </Link>
           </li>
           <li>
             <Link to={"/support"} title="Order">
-              {" "}
               <img src={order} width="100%" alt="" />
             </Link>
           </li>
@@ -56,13 +51,13 @@ const Nav = () => {
           <ul>
             <li>
               <Link to={"/guidelines"} title="Setting">
-                {" "}
+
                 <img src={setting} width="100%" alt="" />
               </Link>
             </li>
             <li>
               <Link to={"/sponsorship"} title="Logout">
-                {" "}
+
                 <img src={logout} width="100%" alt="" />
               </Link>
             </li>

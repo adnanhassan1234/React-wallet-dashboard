@@ -192,20 +192,20 @@ const Home = () => {
                   );
                 })}
               </div>
-              <div className="row mt-4">
-                {data?.map((content, ind) => {
-                  return (
-                    <>
-                      <div className="col-md-6 col-12">
-                        <div className="setting p-4 mt-3" key={ind}>
-                          <img src={content.image} alt="" />
-                          <h5 className="mt-2">{content.title}</h5>
-                        </div>
+            </div>
+            <div className="row mt-2">
+              {data?.map((content, ind) => {
+                return (
+                  <>
+                    <div className="col-md-6 col-12">
+                      <div className="setting p-4 mt-2" key={ind}>
+                        <img src={content.image} alt="" />
+                        <h5 className="mt-2">{content.title}</h5>
                       </div>
-                    </>
-                  );
-                })}
-              </div>
+                    </div>
+                  </>
+                );
+              })}
             </div>
           </div>
         </div>

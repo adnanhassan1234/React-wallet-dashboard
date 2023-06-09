@@ -13,6 +13,7 @@ import faker from 'faker';
 import { Dropdown } from 'react-bootstrap';
 import DateSet from 'Components/DatePicker';
 import CSV from 'Components/CSV';
+import '../charts.scss';
 
 ChartJS.register(
   CategoryScale,
@@ -24,12 +25,12 @@ ChartJS.register(
 );
 
 export const options = {
-  plugins: {
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart - Stacked',
-    },
-  },
+  // plugins: {
+  //   title: {
+  //     display: true,
+  //     text: 'Chart.js Bar Chart - Stacked',
+  //   },
+  // },
   responsive: true,
   scales: {
     x: {
@@ -49,17 +50,17 @@ export const data = {
     {
       label: 'Dataset 1',
       data: labels.map(() => faker.datatype.number({ min: 0, max: 10 })),
-      backgroundColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgb(75, 192, 192)',
     },
     {
       label: 'Dataset 2',
       data: labels.map(() => faker.datatype.number({ min: 0, max: 100 })),
-      backgroundColor: 'rgb(75, 192, 192)',
+      backgroundColor: '#DE43B5',
     },
     {
       label: 'Dataset 3',
       data: labels.map(() => faker.datatype.number({ min: 0, max: 150 })),
-      backgroundColor: 'rgb(53, 162, 235)',
+      backgroundColor: '#A848E8',
     },
   ],
 };
@@ -67,24 +68,8 @@ export const data = {
 export function BarChart() {
   return (
     <>
-      <div className='main-charts'>
-        <div className='d-flex'>
-          <DateSet />
-          <Dropdown>
-            <Dropdown.Toggle className='btn' id="dropdown-basic">
-              Food Intake
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
-        <CSV />
-      </div>
-      <div className='bar-chart'>
-        <Bar options={options} data={data} />;
+       <div className='bar-chart' style={{ height: '344px' }}>
+        <Bar options={options} data={data}  />
       </div>
     </>
   )
