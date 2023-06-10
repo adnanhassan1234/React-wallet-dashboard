@@ -35,6 +35,7 @@ const settingData = [
   },
 ];
 
+
 const Setting = () => {
   return (
     <>
@@ -71,8 +72,6 @@ const Setting = () => {
                     </>
                   );
                 })}
-
-              
               </Nav>
             </div>
           </div>
