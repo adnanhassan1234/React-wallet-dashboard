@@ -9,8 +9,12 @@ import { Link } from 'react-router-dom';
 const SupportSideBar = () => {
   return (
     <div className={classes.messageListSidebar}>
+        <h5 className="mx-3 mt-4">Messages</h5>
+      <input type="search" className="form-control" placeholder='search for message...'  />
+      <h4 className='mt-3 mx-3' style={{color:'#1A1A1A'}}>Active</h4>
       <ul>
         <li className={classes.active}>
+       
           <div className={classes.userImg}>
             <img src={user1} alt="username" />
           </div>

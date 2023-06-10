@@ -16,7 +16,6 @@ import DatePicker from "Components/DatePicker";
 import Date from "Components/DatePicker";
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
-import Reminder from "Pages/Reminder";
 import EndUser from "Pages/User/EndUser";
 import Guidelines from "Pages/Guidelines";
 import Sponsorship from "Pages/Sponsorship";
@@ -29,6 +28,7 @@ import ProviderEndUserProfile from "Pages/ProviderEndUserProfile";
 import Login from "Layout/AuthLayout/login";
 import Home from "Pages/Home";
 import Dashboard from "Pages/Dashboard/Dashboard";
+import Inventory from "Pages/Inventory/Inventory";
 
 const routes = [
   {
@@ -50,6 +50,11 @@ const routes = [
     path: "/wallet",
     layout: MainLayout,
     component: Wallet
+  },
+  {
+    path: "/inventory",
+    layout: MainLayout,
+    component: Inventory
   },
   {
     path: "/date",
@@ -118,11 +123,7 @@ const routes = [
     layout: MainLayout,
     component: ProfilePage
   },
-  {
-    path: "/reminder",
-    layout: MainLayout,
-    component: Reminder
-  },
+ 
  
   {
     path: "/second-header",

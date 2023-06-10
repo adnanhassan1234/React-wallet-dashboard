@@ -51,6 +51,7 @@
   position: relative;
   overflow: hidden;
   padding: 20px;
+  margin-top: 45px !important;
 
   .msg_history {
     overflow: hidden;
@@ -60,8 +61,10 @@
   }
 
   .outgoing .text {
-    background-color: #e4e4e4 !important;
-    color: #D64DD5 !important;
+    background: #e4e4e4 !important;
+    color: #888888 !important;
+    // font-family: 'Rubik';
+    // font-style: normal;
   }
 
   .outgoing,
@@ -96,7 +99,9 @@
 
     .text {
       padding: 12px;
-      background: rgba(142, 178, 111, 1);
+      background: #E750B0;
+      background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #DB50E0;
+    
       border-radius: 10px;
       display: inline-block;
       vertical-align: top;
@@ -104,6 +109,8 @@
       color: #fff;
       position: relative;
       font-size: 13px;
+      font-family: 'Rubik';
+font-style: normal;
     }
   }
 
@@ -193,7 +200,8 @@
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        background-color: rgba(142, 178, 111, 1);
+        background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #DB50E0;
+        box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1); background-color: rgba(142, 178, 111, 1);
         color: #fff;
         
       }

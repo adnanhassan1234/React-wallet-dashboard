@@ -3,6 +3,24 @@
   float: left;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
   background: #fff;
+  input{
+    max-width: 285px;
+    margin: auto;
+  }
+  h5{
+    font-family: 'Rubik';
+font-style: normal;
+font-weight: 300;
+font-size: 26px;
+line-height: 28px;
+/* or 93% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.75px;
+
+color: #1A1A1A;
+  }
 
   .messagesSearch {
     display: flex;
@@ -25,7 +43,9 @@
     overflow-y: auto;
     scrollbar-color: #6e31a2 transparent;
     scrollbar-width: 4px;
-    margin-top: 50px;
+    margin-top: 18px;
+    font-family: 'Rubik';
+    font-style: normal;
 
     li {
       position: relative;
@@ -35,25 +55,29 @@
       min-height: 55px;
       cursor: pointer;
       border-top: 1px solid rgba(0, 0, 0, 0.05);
-    
-    justify-content: space-between;
+      font-family: 'Rubik';
+      font-style: normal;
+
+      justify-content: space-between;
 
       &.active,
       &:hover {
-        background: rgba(229, 240, 220, 1);
-        border-radius: 15px;
-        border: 1px solid rgba(142, 178, 111, 1);
+        background: #EFF1F4;
+        border-radius: 4px;
+        border: 1px solid #EFF1F4;
+        font-family: 'Rubik';
+        font-style: normal;
       }
 
       .description_online {
-       span{
-        color: #9DA09F;
-        font-size: 10px;
-       }
+        span {
+          color: #9DA09F;
+          font-size: 10px;
+        }
       }
 
       .notification {
-        background-color: rgb(255, 124, 109);
+        background: #7ea858;
         border-radius: 20px;
         width: 25px;
         height: 25px;
@@ -61,6 +85,8 @@
         color: white;
         padding-top: 3px;
         margin: 3px 0px 1px 40px;
+        font-family: 'Rubik';
+        font-style: normal;
       }
 
     }
@@ -85,6 +111,19 @@
       font-size: 12px;
       position: relative;
 
+      h6 {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        /* identical to box height, or 175% */
+
+        letter-spacing: 1px;
+
+        color: #222222;
+      }
+
       .text {
         overflow: hidden;
         white-space: nowrap;
@@ -106,6 +145,8 @@
         top: 50%;
         transform: translateY(-50%);
         right: 0;
+        font-family: 'Rubik';
+        font-style: normal;
       }
 
       time {
@@ -139,17 +180,28 @@
       border-color: transparent;
     }
   }
-  .btn_more{
+
+  .btn_more {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    background-color: rgb(142, 178, 111);
+    background: linear-gradient(225deg, #FA4A6F 0%, #EF5395 30.91%, #DE4DCB 75.85%, #CE4CE6 100%), #DB50E0;
+    box-shadow: 0px 20px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
     border: none;
     margin-left: 230px;
     margin-top: 50px;
-    i{
+    font-family: 'Rubik';
+    font-style: normal;
+
+    i {
       margin: 10px 12px;
     }
   }
+}
+
+input {
+  background-color: #EFF1F4 !important;
+  font-family: 'Rubik';
+  font-style: normal;
 }

@@ -3,7 +3,6 @@ import "./dashboard.scss";
 import circle from "../../Images/home/icon (4).png";
 import bar from "../../Images/home/move.png";
 import dot from "../../Images/home/more - Copy.png";
-import graph from "../../Images/home/gr(1).png";
 import LineCharts from "Components/Chart/LineCharts";
 import React, { Component } from "react";
 import Slider from "react-slick";

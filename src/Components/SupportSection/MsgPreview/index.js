@@ -3,6 +3,8 @@ import user1 from "Images/profile4.svg";
 import userlogo from "Images/unsplash.png";
 import { Form } from 'react-bootstrap';
 import classes from "./index.module.scss";
+import more from '../../../Images/home/more (1).png'
+
 const MsgPreview = () => {
   return (
     <div className={classes.msgPreview}>
@@ -14,16 +16,18 @@ const MsgPreview = () => {
         <div className={classes.description}>
         
           <h6>Marcus Curtis</h6>
-          <div className={classes.text}>MAYWART22@gmail.com</div>
+          <div className={classes.text}>adnanhassan@gmail.com</div>
         </div>
       </div>
 
-      <div className={classes.userInfo}>
+
+{/* ticket */}
+      {/* <div className={classes.userInfo}>
         <div className={classes.description}>
           <h6>1235CA2B2</h6>
           <div className={classes.text}>Ticket No.</div>
         </div>
-      </div>
+      </div> */}
 
       <div className={classes.description}>
           <Form>
@@ -32,7 +36,9 @@ const MsgPreview = () => {
               <Form.Check 
                 type={type}
                 id={`default-${type}`}
-                label= <div className='mt-1' >Mark as complete</div>
+                label= <div className='mt-1' >Mark as complete &nbsp; &nbsp;
+                <i className="fa fa-ellipsis-v " aria-hidden="true"></i>
+                </div>
               />
             </div>
           ))}
@@ -304,8 +310,7 @@ const MsgPreview = () => {
         <input
           type="text"
           className={classes.form_control}
-          placeholder="Type a message"
-        />
+          placeholder="Type a message" />
         <button className={`${classes.btn} ${classes.btnSend}`} type="button">
           <i className="fas fa-paper-plane"></i>
         </button>

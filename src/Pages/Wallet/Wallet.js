@@ -72,7 +72,7 @@ const Wallet = () => {
     <>
       <PageTitle title={"Wallet"} />
       <section className="wallet">
-        <h2 className="title">Dashboard</h2>
+        <h2 className="title">My Wallet</h2>
         <div className="row">
           {/* wallet slider */}
           <div className="col-lg-6 col-12">

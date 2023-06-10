@@ -4,13 +4,20 @@ import { Link } from "react-router-dom";
 import classes from "./index.module.scss";
 import notification from "../../Images/navbar/activity.png";
 import message from "../../Images/navbar/messages.png";
+import { useNavigate } from "react-router-dom";
 
 const PageTitle = (props) => {
+
+  const navigate = useNavigate();
   const [isDropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
   };
+
+  const navigateToMessage = () => {
+    navigate("/support");
+  }
 
   return (
     <div className={classes.pageTitle}>
@@ -23,6 +30,7 @@ const PageTitle = (props) => {
                 className={classes.notification}
                 width="100"
                 alt=""
+                onClick={navigateToMessage}
               />
             </div>
             <div>

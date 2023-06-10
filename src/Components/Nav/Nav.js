@@ -10,6 +10,7 @@ import calender from '../../Images/sidebar icon/calendar.png';
 import order from '../../Images/sidebar icon/orders.png';
 import setting from '../../Images/sidebar icon/settings.png';
 import logout from '../../Images/sidebar icon/logout.png';
+import message from '../../Images/navbar/messages.png';
 
 const Nav = () => {
   return (
@@ -32,7 +33,7 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link to={"/reminder"} title="Reminder">
+            <Link to={"/inventory"} title="Inventory">
               <img src={inventory} width="100%" alt="" />
             </Link>
           </li>
@@ -41,9 +42,15 @@ const Nav = () => {
               <img src={calender} width="100%" alt="" />
             </Link>
           </li>
+         
           <li>
-            <Link to={"/support"} title="Order">
-              <img src={order} width="100%" alt="" />
+            <Link to={"/order"} title="Order">
+            <img src={order} width="100%" alt="" />
+            </Link>
+          </li>
+          <li>
+            <Link to={"/support"} title="Message">
+            <img src={message} width="100%" alt="" />
             </Link>
           </li>
         </ul>
