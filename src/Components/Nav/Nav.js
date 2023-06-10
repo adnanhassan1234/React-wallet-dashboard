@@ -15,7 +15,7 @@ import message from '../../Images/navbar/messages.png';
 const Nav = () => {
   return (
     <>
-      <nav>
+      <nav className={classes.navBar}>
         <ul>
           <li>
             <Link to={"/home"} title="Home">
@@ -57,7 +57,7 @@ const Nav = () => {
         <div className="bottomProfile" style={{marginTop:"65px"}}>
           <ul>
             <li>
-              <Link to={"/guidelines"} title="Setting">
+              <Link to={"/setting"} title="Setting">
 
                 <img src={setting} width="100%" alt="" />
               </Link>

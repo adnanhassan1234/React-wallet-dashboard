@@ -1,0 +1,188 @@
+.order {
+    .table-responsive{
+        // border-bottom: 2px solid #DDDDDD;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .complete{
+        background-color: #FAFAFA;
+        padding: 14px;
+    }
+    h2 {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 28px;
+
+        /* identical to box height, or 78% */
+
+        letter-spacing: 1px;
+
+        color: #222222;
+    }
+
+    h4 {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        /* identical to box height, or 100% */
+
+        display: flex;
+        align-items: center;
+        text-align: right;
+        letter-spacing: 0.7px;
+
+        color: #1A1A1A;
+
+    }
+
+    span {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 26px;
+        /* identical to box height, or 78% */
+
+        letter-spacing: 1px;
+
+        color: #222222;
+
+        mix-blend-mode: normal;
+        opacity: 0.25;
+    }
+
+    .filter {
+        span {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 10.9977px;
+
+            text-align: right;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #888888;
+
+        }
+    }
+
+    table {
+
+        thead,
+        tbody,
+        tfoot,
+        tr,
+        td,
+        th {
+            border-color: inherit;
+            border-style: solid;
+            border-width: 0;
+            // padding: 32px !important;
+        }
+        .textRight{
+            display: table-caption;
+        }
+
+        .bordered-cell {
+            border-left: 2px solid #DDDDDD;
+            border-right: 2px solid #DDDDDD;
+        }
+    }
+
+    .name {
+        margin-top: 12px;
+
+        .btn {
+            display: flex;
+            align-items: center;
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 8.99813px;
+            text-align: center;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            background-color: #54BD97 !important;
+            color: #FFFFFF;
+            height: 33px;
+        }
+
+        h4,
+        p {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 24px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.975px;
+            color: #1A1A1A;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+        }
+
+    }
+
+    .content {
+        margin-top: 12px;
+
+        p {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 4px;
+            // display: flex;
+            align-items: center;
+            letter-spacing: 1.4px;
+            color: #1A1A1A;
+        }
+    }
+
+    .date {
+        p {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 50px;
+            // display: flex;
+            align-items: center;
+            letter-spacing: 1.4px;
+            color: #1A1A1A;
+
+        }
+    }
+
+    .price {
+        margin-top: 12px;
+
+        h5 {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            // display: flex;
+            align-items: center;
+            letter-spacing: 1.4px;
+            color: #1A1A1A;
+        }
+
+        p {
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 4px;
+            // display: flex;
+            align-items: center;
+            letter-spacing: 0.975px;
+            color: #1A1A1A;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+    }
+}

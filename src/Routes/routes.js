@@ -17,7 +17,7 @@ import Date from "Components/DatePicker";
 import DateSet from "Components/DatePicker";
 import CSV from "Components/CSV";
 import EndUser from "Pages/User/EndUser";
-import Guidelines from "Pages/Guidelines";
+import Guidelines from "Pages/Setting/setting";
 import Sponsorship from "Pages/Sponsorship";
 import Providers from "Pages/User/Providers";
 import ProviderUserProfile from "Pages/User/ProvidersPatient";
@@ -29,6 +29,8 @@ import Login from "Layout/AuthLayout/login";
 import Home from "Pages/Home";
 import Dashboard from "Pages/Dashboard/Dashboard";
 import Inventory from "Pages/Inventory/Inventory";
+import Order from "Pages/Order/Order";
+import Setting from "Pages/Setting/setting";
 
 const routes = [
   {
@@ -57,6 +59,11 @@ const routes = [
     component: Inventory
   },
   {
+    path: "/order",
+    layout: MainLayout,
+    component: Order
+  },
+  {
     path: "/date",
     layout: MainLayout,
     component: DateSet
@@ -68,9 +75,9 @@ const routes = [
   },
 
   {
-    path: "/guidelines",
+    path: "/setting",
     layout: MainLayout,
-    component: Guidelines
+    component: Setting
   },
   {
     path: "/providers",
