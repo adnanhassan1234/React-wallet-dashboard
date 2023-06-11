@@ -144,7 +144,7 @@ const Home = () => {
               </div>
               <div className="dollor">
                 <div className="dolor_price">
-                  <h4 className="mb-0">New Sale!</h4>
+                  <h4 className="mb-0"><b>New Sale!</b></h4>
                 </div>
                 <hr />
                 <div className="canlender_date d-flex justify-content-between">

@@ -1,14 +1,13 @@
-import PageTitle from "Components/Pagetitle";
+import React from "react";
 import "./dashboard.scss";
 import circle from "../../Images/home/icon (4).png";
 import bar from "../../Images/home/move.png";
 import dot from "../../Images/home/more - Copy.png";
-import LineCharts from "Components/Chart/LineCharts";
-import React, { Component } from "react";
 import Slider from "react-slick";
 import { BarChart } from "Components/Chart/BarChart";
 import Tab from "react-bootstrap/Tab";
 import { Tabs } from "react-bootstrap";
+import PageTitle from "Components/Pagetitle";
 
 const Dashboard = () => {
   const expensesPercentage = [
@@ -33,18 +32,23 @@ const Dashboard = () => {
     {
       name: "Sylvia",
       time: "Alllen Durss - 11:30 AM",
-      earning: "+27.98",
+      earning: "+31.06",
     },
     {
       name: "Sylvia",
       time: "Alllen Durss - 11:30 AM",
-      earning: "+27.98",
+      earning: "+31.06",
     },
     {
       name: "Sylvia",
       time: "Alllen Durss - 11:30 AM",
-      earning: "+27.98",
+      earning: "+31.06",
     },
+    // {
+    //   name: "Sylvia",
+    //   time: "Alllen Durss - 11:30 AM",
+    //   earning: "+27.98",
+    // },
   ];
 
   const settings = {
@@ -57,7 +61,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <PageTitle title={"Dashboard"} />
+      <PageTitle title="Dashboard" />
       <section className="dashboard">
         <h2 className="title">Dashboard</h2>
         <div className="row">
@@ -76,26 +80,16 @@ const Dashboard = () => {
                 </div>
               </div>
               <Slider {...settings}>
-                <div>
-                  <BarChart />
-                </div>
-                <div>
-                  <BarChart />
-                </div>
-                <div>
-                  <BarChart />
-                </div>
+                {[1, 2, 3].map((_, index) => (
+                  <div key={index}>
+                    <BarChart />
+                  </div>
+                ))}
               </Slider>
-
-              <Tabs
-                defaultActiveKey="login"
-                id="fill-tab-example"
-                className="mb-3 mt-2 tabs_row"
-                fill
-              >
+              <Tabs defaultActiveKey="login" id="fill-tab-example" className="mb-3 mt-2 tabs_row" fill>
                 <Tab eventKey="login" title="">
                   <div className="d-flex justify-content-between mt-5">
-                    {expensesPercentage?.map((content, ind) => (
+                    {expensesPercentage.map((content, ind) => (
                       <div className="circle d-flex" key={ind}>
                         <img src={content.image} alt="" />
                         <div className="content mx-2">
@@ -108,7 +102,7 @@ const Dashboard = () => {
                 </Tab>
                 <Tab eventKey="sign up" title="">
                   <div className="d-flex justify-content-between mt-5">
-                    {expensesPercentage?.map((content, ind) => (
+                    {expensesPercentage.map((content, ind) => (
                       <div className="circle d-flex" key={ind}>
                         <img src={content.image} alt="" />
                         <div className="content mx-2">
@@ -130,29 +124,25 @@ const Dashboard = () => {
                 </p>
                 <img src={bar} alt="" />
               </div>
-              {eventData?.map((content, ind) => {
-                return (
-                  <>
-                    <div className="calenders my-4" key={ind}>
-                      <div className="d-flex justify-content-between">
-                        <div>
-                          <h6 className="ml-3 mb-0">{content.name}</h6>
-                          <p>{content.time}</p>
-                        </div>
-                        <h5>{content.earning}</h5>
-                      </div>
-                      <div className="d-flex justify-content-between mb-3">
-                        <button type="button" className="btn btn-success">
-                          PAyPAL
-                        </button>
-                        <div>
-                          <img src={dot} alt="" />
-                        </div>
-                      </div>
+              {eventData.map((content, ind) => (
+                <div className="calenders my-4" key={ind} style={{borderBottom:'2px solid #DDDDDD'}}>
+                  <div className="d-flex justify-content-between">
+                    <div>
+                      <h6 className="ml-3 mb-0">{content.name}</h6>
+                      <p>{content.time}</p>
                     </div>
-                  </>
-                );
-              })}
+                    <h5>{content.earning}</h5>
+                  </div>
+                  <div className="d-flex justify-content-between mb-3">
+                    <button type="button" className="btn btn-success">
+                      PAyPAL
+                    </button>
+                    <div>
+                      <img src={dot} alt="" />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

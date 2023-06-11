@@ -1,155 +1,105 @@
-.wallet {
-    .slick-dots {
-        position: absolute;
-        bottom: -15px !important;
-        display: block;
-        width: 100%;
-        // padding: 0;
-        // margin: 0;
-        list-style: none;
-        text-align: center;
-    }
-.title{
-    font-family: 'Rubik';
-font-style: normal;
-font-weight: 300;
-font-size: 31px;
-line-height: 28px;
-/* or 78% */
+$font-rubik: 'Rubik', sans-serif;
+$color-primary: #732CF5;
+$color-secondary: #F541D5;
+$color-text: #1A1A1A;
+$color-gray: #535353;
+$color-background: #F2F2F2;
+$color-white: #FFFFFF;
 
-display: flex;
-align-items: center;
-letter-spacing: 0.9px;
-
-color: #1A1A1A;
+@mixin font($weight, $size, $line-height, $spacing) {
+  font-family: $font-rubik;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  letter-spacing: $spacing;
 }
-    .slick-prev:before,
-    .slick-next:before {
-        display: none !important;
+
+.wallet {
+  .slick-dots {
+    position: absolute;
+    bottom: -15px !important;
+    display: block;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+  }
+
+  .title {
+    @include font(300, 31px, 28px, 0.9px);
+    display: flex;
+    align-items: center;
+    color: $color-text;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none !important;
+  }
+
+  .box {
+    background: $color-background;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    p {
+      @include font(500, 15px, normal, 1.5px);
+      color: $color-gray;
+    }
+  }
+
+  .wallet_card {
+    background: linear-gradient(9.57deg, $color-primary 6%, $color-secondary 94%), #444444;
+    border-radius: 15px;
+
+    h4 {
+      @include font(400, 22px, 28px, 1.1px);
+      color: $color-white;
     }
 
-    .box {
-        // background: #F2F2F2;
-        background: #F2F2F2;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-
-        p {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            align-items: center;
-            letter-spacing: 1.5px;
-
-            color: #535353;
-        }
+    h5 {
+      @include font(400, 18px, 28px, 1.8px);
+      color: $color-white;
     }
 
-    .wallet_card {
-        // height: 178px;
-        // width: 283px;
-        background: linear-gradient(9.57deg, #732CF5 6%, #F541D5 94%), #444444;
-        // box-shadow: 0px 30px 29.4px rgba(0, 0, 0, 0.05);
-        border-radius: 15px;
-
-        h4 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 28px;
-            /* identical to box height, or 127% */
-
-            display: flex;
-            align-items: center;
-            letter-spacing: 1.1px;
-
-            color: #FFFFFF;
-        }
-
-        h5 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            /* identical to box height, or 156% */
-
-            display: flex;
-            align-items: center;
-            letter-spacing: 1.8px;
-
-            color: #FFFFFF;
-        }
-
-        h6 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            /* identical to box height, or 156% */
-
-            display: flex;
-            align-items: center;
-            text-align: right;
-            letter-spacing: 1.8px;
-
-            color: #FFFFFF;
-        }
-
-        p {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 8.99813px;
-            display: flex;
-            align-items: center;
-            text-align: right;
-            letter-spacing: 6.75px;
-
-            color: #FFFFFF;
-        }
+    h6 {
+      @include font(400, 18px, 28px, 1.8px);
+      text-align: right;
+      color: $color-white;
     }
 
-    .circle {
-        img {
-            width: 32px;
-            height: 32px;
-        }
+    p {
+      @include font(500, 8.99813px, normal, 6.75px);
+      text-align: right;
+      color: $color-white;
     }
+  }
 
-    input {
-        background-color: #ebe7e7 !important;
+  .circle {
+    img {
+      width: 32px;
+      height: 32px;
     }
+  }
 
-    .calender {
-        h6 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 28px;
-        }
+  input {
+    background-color: #ebe7e7 !important;
+  }
+
+  .calender {
+    h6 {
+      @include font(500, 28px, normal, normal);
     }
+  }
 
-    .calenders {
-        h6 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 28px;
-            /* identical to box height, or 156% */
-
-            letter-spacing: 1px;
-
-            color: #222222;
-        }
+  .calenders {
+    h6 {
+      @include font(600, 18px, 28px, 1px);
+      color: $color-text;
     }
+  }
 
-    .recharts-cartesian-axis-tick-value {
-        display: block !important;
-    }
-
+  .recharts-cartesian-axis-tick-value {
+    display: block !important;
+  }
 }

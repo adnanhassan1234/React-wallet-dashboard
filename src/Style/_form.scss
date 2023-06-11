@@ -294,7 +294,7 @@ input[type="checkbox"],
   width: 18px;
   height: 18px;
   border: 1px solid $theme-color;
-  appearance: none;
+  // appearance: none;
   border-radius: 3px;
   margin-left: -25px !important;
 
@@ -312,7 +312,7 @@ input[type="checkbox"],
 input[type='search']{
   background: url("../Images/searchIcon.svg");
   background-repeat: no-repeat;
-  padding-right: 50px;
+  // padding-right: 50px;
   background-position: calc(100% - 15px) center;
 }
 .form-selector{

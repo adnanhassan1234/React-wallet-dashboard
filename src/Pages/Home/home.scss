@@ -1,360 +1,247 @@
+// Variables
+$title-font-family: 'Rubik';
+$title-font-weight: 300;
+$title-font-size: 33px;
+$title-line-height: 28px;
+$title-color: #1A1A1A;
+
+$box-background-color: #F2F2F2;
+$box-border-radius: 4px;
+$box-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+$box-height: 503px;
+
+$dollar-content-height: 296px;
+$dark-mode-height: 189px;
+
+$desktop-user-background-color: #D54CDB;
+$desktop-user-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
+$desktop-user-height: 252px;
+
+$sale-content-height: 234px;
+
+$line-chart-background-color: #F2F2F2;
+$line-chart-box-shadow: 0px 10px 20px 0px #0000001A;
+$line-chart-height: 362px;
+
+$setting-background-color: #F2F2F2;
+$setting-box-shadow: 0px 10px 20px 0px #0000001A;
+$setting-height: 123px;
+
+// Mixins
+@mixin font-style($font-family, $font-weight, $font-size, $line-height, $letter-spacing, $color) {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+@mixin dollor-styling {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  padding: 14px;
+
+  h4 {
+    @include font-style($title-font-family, 300, 21px, 28px, 1px, #222222);
+  }
+
+  p {
+    @include font-style($title-font-family, 600, 11.9975px, 43px, 1px, #222222);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
+
+// Styles
 .home {
-    .title {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 33px;
-        line-height: 28px;
-        /* identical to box height, or 78% */
+  .title {
+    @include font-style($title-font-family, $title-font-weight, $title-font-size, $title-line-height, 0.9px, $title-color);
+    display: flex;
+    align-items: center;
+  }
 
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.9px;
-
-        color: #1A1A1A;
-    }
-
-    .box {
-        border-radius: 4px;
-        background: #F2F2F2;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        height: 503px;
-        position: relative;
-
-        .canlender_date {
-            position: absolute;
-            bottom: 0px;
-            left: 10px;
-            right: 10px;
-            padding: 14px;
-            // background-color: #fff;
-            color: #000;
-
-            span {
-                font-family: 'Rubik';
-                font-style: normal;
-                font-weight: 500;
-                font-size: 12.9973px;
-                line-height: 43px;
-
-                letter-spacing: 2px;
-
-                color: #222222;
-
-                mix-blend-mode: normal;
-                opacity: 0.5;
-            }
-        }
-
-        .check img {
-            margin-left: 23px;
-            cursor: pointer;
-        }
-    }
-
-    .des {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 32px;
-        margin-top: 22px;
-
-        display: flex;
-        align-items: center;
-        letter-spacing: 1.8px;
-
-        color: #757575;
-    }
-}
-
-// dollor_content css
-.dollor_content {
-
-    background: #F2F2F2;
-    border-radius: 4px;
-    height: 296px;
-    position: relative;
-    box-shadow: 0px 10px 20px 0px #0000001A;
+  .box {
+    border-radius: $box-border-radius;
+    background: $box-background-color;
+    box-shadow: $box-box-shadow;
+    height: $box-height;
     position: relative;
 
-    .dollor {
-        position: absolute;
-        bottom: 0px;
-        left: 10px;
-        right: 10px;
-        padding: 14px;
+    .canlender_date {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      padding: 14px;
+      color: #000;
 
-        h4 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 300;
-            font-size: 34px;
-            line-height: 28px;
-            /* identical to box height, or 82% */
-
-            letter-spacing: 1px;
-
-            color: #222222;
-        }
-
-        p {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 11.9975px;
-            // line-height: 43px;
-            /* identical to box height, or 356% */
-
-            letter-spacing: 1px;
-
-            color: #222222;
-
-            mix-blend-mode: normal;
-            opacity: 0.5;
-        }
-    }
-
-}
-
-// dark mode css
-
-// dollor_content css
-.dark_mode {
-
-    background: #F2F2F2;
-    border-radius: 4px;
-    height: 189px;
-    position: relative;
-    box-shadow: 0px 10px 20px 0px #0000001A;
-    position: relative;
-
-    .dollor {
-        position: absolute;
-        bottom: 0px;
-        left: 10px;
-        right: 10px;
-        padding: 14px;
-
-
-    }
-
-    .enable p {
-        color: #222222;
-        font-family: 'Rubik';
-        font-size: 12px;
-    }
-
-}
-
-// desktop_percentage css
-.desktop_user {
-    border-radius: 4px;
-    background-color: #D54CDB;
-    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1);
-    height: 252px;
-
-    .desktop_percentage {
-        .bar {
-            float: right !important;
-        }
-
-    }
-
-    h3 {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 30px;
-        line-height: 28px;
-        /* identical to box height, or 93% */
-
-        display: flex;
-        align-items: center;
-        letter-spacing: 1.5px;
-
-        color: #FFFFFF;
-    }
-
-    span {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11.9975px;
-        line-height: 43px;
-        /* identical to box height, or 356% */
-
-        letter-spacing: 1px;
-
-        color: #FFFFFF;
-
+      span {
+        @include font-style($title-font-family, 500, 12.9973px, 43px, 2px, #222222);
         mix-blend-mode: normal;
-        opacity: 0.5
-    }
-}
-
-
-
-// sale_content css
-.sale_content {
-
-    background: #F2F2F2;
-    border-radius: 4px;
-    height: 234px;
-    position: relative;
-    box-shadow: 0px 10px 20px 0px #0000001A;
-    position: relative;
-
-    .dollor {
-        position: absolute;
-        bottom: 0px;
-        left: 10px;
-        right: 10px;
-        padding: 14px;
-
-        h4 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 28px;
-            /* identical to box height, or 127% */
-
-            display: flex;
-            align-items: center;
-            letter-spacing: 1.1px;
-
-            color: #1A1A1A;
-        }
-
-        p {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 11.9975px;
-            // line-height: 43px;
-            /* identical to box height, or 356% */
-
-            letter-spacing: 1px;
-
-            color: #222222;
-
-            mix-blend-mode: normal;
-            opacity: 0.5;
-        }
-    }
-
-    h3 {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11.9975px;
-        line-height: 43px;
-        /* identical to box height, or 356% */
-
-        letter-spacing: 1.5px;
-
-        color: #222222;
-
-        mix-blend-mode: normal;
-        opacity: 0.75;
-    }
-
-    span {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 11.9975px;
-        line-height: 43px;
-        /* identical to box height, or 356% */
-
-        letter-spacing: 1px;
-
-        color: #222222;
-
-        mix-blend-mode: normal;
-        // opacity: 0.5
-    }
-}
-
-// line charts css
-.line_chart {
-    border-radius: 4px;
-    background: #F2F2F2;
-    box-shadow: 0px 10px 20px 0px #0000001A;
-    height: 362px;
-    position: relative;
-    .line{
-        margin-left: -50px !important;
-    }
-    @media (max-width: 767px) {
-        .line{
-            margin-left: -50px !important;
-            width: 320px !important;
-            right: 0 !important;
-        }
+        opacity: 0.5;
       }
-    .circle {
-        img{
-            width: 32px;
-            height: 32px;
-        }
-        h5{
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 19.9958px;
-           
-            letter-spacing: 1px;
-            
-            color: #222222;
-        }
-        p{
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 10.9977px;
-          
-            letter-spacing: 1px;
-            
-            color: #222222;
-            
-            mix-blend-mode: normal;
-            opacity: 0.5;
-        }
-    } 
-    .calender {
-        h6{
-            font-family: 'Rubik';
-            font-size: 22px;
-            font-weight: 400;
-            line-height: 28px;
-            letter-spacing: 1.1px;
-            color: #1A1A1A;
-        }
-        h5{
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            display: flex;
-            align-items: center;
-            text-align: right;
-            letter-spacing: 1.35px;
-            color: #1A1A1A;
-        }
-    } 
-}
-.recharts-cartesian-axis-tick-value{
-    display: none !important;
+    }
+
+    .check img {
+      margin-left: 23px;
+      cursor: pointer;
+    }
+  }
+
+  .des {
+    @include font-style($title-font-family, 400, 24px, 32px, 1.8px, #757575);
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+  }
 }
 
-// setting css
-.setting{
-    border-radius: 4px;
-    background: #F2F2F2;
-    box-shadow: 0px 10px 20px 0px #0000001A;
-    height: 123px;
-    position: relative;
+.dollor_content {
+  background: $box-background-color;
+  border-radius: $box-border-radius;
+  height: $dollar-content-height;
+  position: relative;
+  box-shadow: $box-box-shadow;
+  position: relative;
+
+  .dollor {
+    @include dollor-styling;
+  }
+}
+
+.dark_mode {
+  background: $box-background-color;
+  border-radius: $box-border-radius;
+  height: $dark-mode-height;
+  position: relative;
+  box-shadow: $box-box-shadow;
+  position: relative;
+
+  .dollor {
+    @include dollor-styling;
+  }
+
+  .enable p {
+    color: #222222;
+    font-family: 'Rubik';
+    font-size: 12px;
+  }
+}
+
+.desktop_user {
+  border-radius: $box-border-radius;
+  background-color: $desktop-user-background-color;
+  box-shadow: $desktop-user-box-shadow;
+  height: $desktop-user-height;
+
+  .desktop_percentage {
+    .bar {
+      float: right !important;
+    }
+  }
+
+  h3 {
+    @include font-style($title-font-family, 300, 30px, 28px, 1.5px, #FFFFFF);
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    @include font-style($title-font-family, 500, 11.9975px, 43px, 1px, #FFFFFF);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+}
+
+.sale_content {
+  background: $box-background-color;
+  border-radius: $box-border-radius;
+  height: $sale-content-height;
+  position: relative;
+  box-shadow: $box-box-shadow;
+  position: relative;
+
+  .dollor {
+    @include dollor-styling;
+  }
+
+  h3 {
+    @include font-style($title-font-family, 500, 11.9975px, 43px, 1.5px, #222222);
+    mix-blend-mode: normal;
+    opacity: 0.75;
+  }
+
+  span {
+    @include font-style($title-font-family, 500, 11.9975px, 43px, 1px, #222222);
+    mix-blend-mode: normal;
+  }
+}
+
+.line_chart {
+  border-radius: $box-border-radius;
+  background: $line-chart-background-color;
+  box-shadow: $line-chart-box-shadow;
+  height: $line-chart-height;
+  position: relative;
+
+  .line {
+    margin-left: -50px !important;
+
+    @media (max-width: 767px) {
+      margin-left: -50px !important;
+      width: 320px !important;
+      right: 0 !important;
+    }
+  }
+
+  .circle {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    h5 {
+      @include font-style($title-font-family, 400, 19.9958px, 28px, 1px, #222222);
+    }
+
+    p {
+      @include font-style($title-font-family, 500, 10.9977px, 43px, 1px, #222222);
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+
+  .calender {
+    h6 {
+      font-family: 'Rubik';
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 1.1px;
+      color: #1A1A1A;
+    }
+
+    h5 {
+      @include font-style($title-font-family, 400, 18px, 28px, 1.35px, #1A1A1A);
+      display: flex;
+      align-items: center;
+      text-align: right;
+    }
+  }
+
+  .recharts-cartesian-axis-tick-value {
+    display: none !important;
+  }
+}
+
+.setting {
+  border-radius: $box-border-radius;
+  background: $box-background-color;
+  box-shadow: $box-box-shadow;
+  height: $setting-height;
+  position: relative;
 }

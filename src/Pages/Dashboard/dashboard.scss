@@ -1,136 +1,120 @@
-.dashboard {
-    .calenders {
-        border-bottom: 2px solid #DDDDDD;
-    }
-    .calender {
-        h6 {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 28px;
-            /* identical to box height, or 156% */
-            
-            display: flex;
-            align-items: center;
-            letter-spacing: 1.35px;
-            
-            color: #1A1A1A;
-        }
-        h5{
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 28px;
-            /* identical to box height, or 156% */
-            
-            display: flex;
-            align-items: center;
-            text-align: right;
-            letter-spacing: 1.35px;
-            
-            color: #1A1A1A;
-        }
-        
+// Variables
+$primaryColor: #1A1A1A;
+$secondaryColor: #5D8AC7;
+$tertiaryColor: #535353;
+$lightGray: #DDDDDD;
+$lighterGray: #F2F2F2;
+$lightestGray: #ebe7e7;
+$purple: #CE57D0;
+$rubikFont: 'Rubik', sans-serif;
 
-    }
-    .btn{
-        padding: 0px 25px !important;
-        border-radius: 5px;
-        background-color: #5D8AC7 !important;
-        letter-spacing: 2px !important;
-        height: 34px;
-    }
-    .title {
-        font-family: 'Rubik';
-        font-style: normal;
-        font-weight: 300;
-        font-size: 34px;
-        line-height: 28px;
-        /* identical to box height, or 78% */
-
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.9px;
-
-        color: #1A1A1A;
-    }
-
-    .box {
-        background: #F2F2F2;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-
-        p {
-            font-family: 'Rubik';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 28px;
-            /* identical to box height, or 187% */
-
-            display: flex;
-            align-items: center;
-            letter-spacing: 1.5px;
-
-            color: #535353;
-        }
-    }
-
-    .circle {
-        img {
-            width: 32px;
-            height: 32px;
-        }
-    }
-
-    input {
-        background-color: #ebe7e7 !important;
-    }
-
-    .slick-dots {
-        position: absolute;
-        bottom: -141px !important;
-        display: block;
-        width: 100%;
-        // padding: 0;
-        // margin: 0;
-        list-style: none;
-        text-align: center;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-        display: none !important;
-    }
+// Mixins
+@mixin font($weight, $size, $lineHeight, $letterSpacing) {
+  font-family: $rubikFont;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
 }
 
+// Styles
+.dashboard {
+
+  .calendar {
+    h6 {
+      @include font(400, 18px, 28px, 1.35px);
+      display: flex;
+      align-items: center;
+      color: $primaryColor;
+    }
+
+    h5 {
+      @include font(600, 18px, 28px, 1.35px);
+      display: flex;
+      align-items: center;
+      text-align: right;
+      color: $primaryColor;
+    }
+  }
+
+  .btn {
+    padding: 0 25px !important;
+    border-radius: 5px;
+    background-color: $secondaryColor !important;
+    letter-spacing: 2px !important;
+    height: 34px;
+  }
+
+  .title {
+    @include font(300, 34px, 28px, 0.9px);
+    display: flex;
+    align-items: center;
+    color: $primaryColor;
+  }
+
+  .box {
+    background: $lighterGray;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    p {
+      @include font(500, 15px, 28px, 1.5px);
+      display: flex;
+      align-items: center;
+      color: $tertiaryColor;
+    }
+  }
+
+  .circle {
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  input {
+    background-color: $lightestGray !important;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -141px !important;
+    display: block;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    display: none !important;
+  }
+}
 
 .nav-link {
-    border: none !important;
-    color: #EEEEEE;
-    font-size: 14px;
-    line-height: 19px;
-    padding: 10px 30px;
-    display: block;
-    border-bottom: 2px solid #DDDDDD !important;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 11.9975px;
-    line-height: 14px;
-    text-align: center;
-    letter-spacing: 3px;
+  border: none !important;
+  color: #EEEEEE;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 10px 30px;
+  display: block;
+  border-bottom: 2px solid $lightGray !important;
+  font-family: $rubikFont;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
 
-    &:hover {
-        color: #EEEEEE !important;
-    }
+  &:hover {
+    color: #EEEEEE !important;
+  }
 
-    &.active {
-        border-bottom: 2px solid #CE57D0 !important;
-        background-color: transparent !important;
-        color: white !important;
-    }
-   
+  &.active {
+    border-bottom: 2px solid $purple !important;
+    background-color: transparent !important;
+    color: white !important;
+  }
 }
+.calendars {
+    border-bottom: 2px solid $lightGray !important;
+  }
