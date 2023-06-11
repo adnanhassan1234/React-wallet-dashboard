@@ -11,8 +11,6 @@ import {
 import { Bar } from 'react-chartjs-2';
 import faker from 'faker';
 import { Dropdown } from 'react-bootstrap';
-import DateSet from 'Components/DatePicker';
-import CSV from 'Components/CSV';
 import '../charts.scss';
 
 ChartJS.register(
