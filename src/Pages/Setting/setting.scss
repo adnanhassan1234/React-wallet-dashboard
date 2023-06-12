@@ -106,14 +106,18 @@ $disabled-color: #757575;
   .form-range {
     width: 100%;
     height: 1.5rem;
-    width: 207px !important;
+    width: 200px !important;
     padding: 0;
     background-color: transparent;
     appearance: none;
   }
 
-  .range input {
-    width: 207px !important;
+  .range input[type="range"] {
+    width: 200px !important;
+
+    @media screen and (max-width: 580px) {
+      width: 150px !important;
+    }
   }
 
   .main_content {

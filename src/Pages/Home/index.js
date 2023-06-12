@@ -111,7 +111,15 @@ const Home = () => {
                     <img src={dot} alt="" />
                   </div>
                   <h3 style={{ fontSize: "14px" }}>
-                    <img src={switchs} alt="" />
+                    {/* <img src={switchs} alt="" /> */}
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="flexSwitchCheckChecked"
+                      />
+                    </div>
                   </h3>
                 </div>
               </div>
@@ -144,7 +152,9 @@ const Home = () => {
               </div>
               <div className="dollor">
                 <div className="dolor_price">
-                  <h4 className="mb-0"><b>New Sale!</b></h4>
+                  <h4 className="mb-0">
+                    <b>New Sale!</b>
+                  </h4>
                 </div>
                 <hr />
                 <div className="canlender_date d-flex justify-content-between">

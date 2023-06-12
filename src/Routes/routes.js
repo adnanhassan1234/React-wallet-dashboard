@@ -1,6 +1,5 @@
 import NotFound from "Pages/NotFound/loadable";
 import MainLayout from "Layout/MainLayout";
-import AuthLayout from "../Layout/AuthLayout";
 import { BarChart } from "Components/Chart/BarChart";
 import Wallet from "Pages/Wallet/Wallet";
 import Support from "Pages/Support";
@@ -10,12 +9,25 @@ import Dashboard from "Pages/Dashboard/Dashboard";
 import Inventory from "Pages/Inventory/Inventory";
 import Order from "Pages/Order/Order";
 import Setting from "Pages/Setting/setting";
+import Splash from "Layout/AuthLayout/Splash";
+import AuthLayout from "Layout/AuthLayout";
+// import AuthLayout from "Layout/AuthLayout/Splash";
 
 const routes = [
+  // {
+  //   path: "/",
+  //   layout: AuthLayout,
+  //   component: Splash
+  // },
   {
     path: "/",
-    layout: AuthLayout,
+    layout: Splash,
     component: Login
+  },
+  {
+    path: "/login",
+    layout: AuthLayout,
+    component: AuthLayout
   },
   {
     path: "/home",

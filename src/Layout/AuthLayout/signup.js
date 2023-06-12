@@ -6,12 +6,13 @@ import "./login.scss";
 import btn from "../../Images/login/button.png";
 import google from "../../Images/login/icon.png";
 import facebook from "../../Images/login/facebook.png";
+import Checkbox from "@mui/material/Checkbox";
 
 const Signup = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const signinToEmailHome = () => navigate("/home");
+  // const signinToEmailHome = () => navigate("/home");
 
   const signUpPage = () => navigate("/SignUp");
 
@@ -55,31 +56,19 @@ const Signup = () => {
         <Form.Group className="form-group">
           <div className="d-flex justify-content-between">
             <div className="d-flex">
-              <span className="mx-2 mt-3 text-white"> AGREED to TERMS?</span>
+              <div class="form-check d-flex">
+                <input
+                  type="checkbox"
+                  name=""
+                  id=""
+                  style={{ boxShadow: "none !important", background: "none" }}
+                /><span className="mx-2 mt-3 text-white agreed"> AGREED TO TERMS?</span>
+              </div>
             </div>
             <div className="img">
               <img src={btn} width="100%" alt="" />
             </div>
           </div>
-        </Form.Group>
-        <Form.Group className="form-group">
-          <button className="btn" onClick={signinToEmailHome}>
-            <img src={google} alt="" />{" "}
-            <span className="m-auto">Login with Google</span>
-          </button>
-        </Form.Group>
-        <Form.Group className="form-group">
-          <button className="btn" onClick={signinToEmailHome}>
-            <img src={facebook} alt="" />{" "}
-            <span className="m-auto">Login with Facebook</span>
-          </button>
-        </Form.Group>
-
-        <Form.Group className="form-group text-center">
-          <span className="account">Don’t have an account?</span>{" "}
-          <Link className="text_green" onClick={signUpPage}>
-            &nbsp;login
-          </Link>
         </Form.Group>
       </Form>
     </div>

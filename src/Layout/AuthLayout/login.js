@@ -39,9 +39,25 @@ const Login = (props) => {
         </Form.Group>
 
         <Form.Group className="form-group">
-          <div className="d-flex justify-content-between">
-            <div className="d-flex">
-              <span className="mx-2 mt-3 text-white">Remember me?</span>
+          <div className=" switchs d-flex justify-content-between">
+            <div className="d-flex" style={{marginLeft: '-17px'}}>
+              <span className=" mt-3 text-white">
+                <div class="form-check form-switch d-flex">
+                  {/* <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="flexSwitchCheckChecked"
+                  />
+                  <label class="form-check-label" for="flexSwitchCheckChecked">
+                    Remember me?
+                  </label> */}
+                  <label class="switch">
+  <input type="checkbox" style={{boxShadow:'none !important', background:'none'}} />
+  <span class="slider round"> </span>
+</label>  <span className="remember">Remember me?</span>
+                </div>
+              </span>
             </div>
             <div className="img">
               <img src={btn} width="100%" alt="" />
@@ -49,23 +65,18 @@ const Login = (props) => {
           </div>
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group className="googles  form-group">
           <button className="btn" onClick={signinToEmailHome}>
-            <img src={google} alt="" /> <span className="m-auto">Login with Google</span>
+            <img src={google} alt="" />{" "}
+            <span className="m-auto">Login with Google</span>
           </button>
         </Form.Group>
 
-        <Form.Group className="form-group">
+        <Form.Group className="facebooks form-group mb-5">
           <button className="btn" onClick={signinToEmailHome}>
-            <img src={facebook} alt="" /> <span className="m-auto">Login with Facebook</span>
+            <img src={facebook} alt="" />{" "}
+            <span className="m-auto">Login with Facebook</span>
           </button>
-        </Form.Group>
-
-        <Form.Group className="form-group text-center">
-          <span className="account">Don’t have an account?</span>{" "}
-          <Link className="text_green" onClick={signUpPage}>
-            sign up
-          </Link>
         </Form.Group>
       </Form>
     </div>

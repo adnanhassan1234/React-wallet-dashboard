@@ -32,7 +32,7 @@ const MsgPreview = () => {
       <div className={classes.description}>
           <Form>
           {['checkbox'].map((type) => (
-            <div key={`default-${type}`} classNameName="mb-3">
+            <div key={`default-${type}`} className="mb-3">
               <Form.Check 
                 type={type}
                 id={`default-${type}`}

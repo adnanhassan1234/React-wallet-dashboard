@@ -13,6 +13,7 @@ export const callAPI = (endpoint, method, headers = {}, params = {}, data = {}) 
     params,
   };
 
+  
   return axios(options).then((response) => {
     const responseAPI = response.data;
     return responseAPI;
