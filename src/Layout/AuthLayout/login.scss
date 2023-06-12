@@ -27,7 +27,6 @@ $borderColor: rgba(255, 255, 255, 0.25);
     max-width: 603px;
     margin: auto;
     border-bottom: 2px solid $borderColor;
-    // margin-top: 66px;
   }
 
   .logins {
@@ -44,7 +43,6 @@ $borderColor: rgba(255, 255, 255, 0.25);
     text-align: center;
     letter-spacing: 1.3px;
   }
-
 
   .facebooks span {
     color: #3D64C3;
@@ -66,21 +64,13 @@ $borderColor: rgba(255, 255, 255, 0.25);
   right: -0.07%;
   top: -0.13%;
   min-height: 100vh;
-  background: linear-gradient(224.98deg,
-    $primary-color 7.98%,
-    $secondary-color 33.4%,
-    $tertiary-color 70.37%,
-    $quaternary-color 90.24%);
+  background: linear-gradient(224.98deg, $primary-color 7.98%, $secondary-color 33.4%, $tertiary-color 70.37%, $quaternary-color 90.24%);
   background-color: $accent-color;
 
   .tabs_row {
     max-width: 600px;
     margin: auto;
   }
-
-
-
-
 
   .box {
     max-width: 350px;
@@ -91,12 +81,10 @@ $borderColor: rgba(255, 255, 255, 0.25);
       font-style: normal;
       font-weight: 500;
       font-size: 32px;
-      // display: flex;
       align-items: center;
       text-align: center;
       letter-spacing: 0.8px;
-
-      color: #FFFFFF;
+      color: $text-color;
     }
   }
 
@@ -127,13 +115,21 @@ $borderColor: rgba(255, 255, 255, 0.25);
 
   input {
     background: $input-background !important;
-    // border: 2px solid $input-border !important;
     box-shadow: 0px 20px 15px $input-shadow !important;
     height: 50px !important;
     background: rgba(255, 255, 255, 0.15);
 
     &::placeholder {
-      color: $placeholder-color !important;
+      font-family: 'Rubik';
+font-style: normal;
+font-weight: 500;
+font-size: 13.9971px;
+line-height: 17px;
+/* identical to box height */
+
+letter-spacing: 2px;
+
+color: #EEEEEE;
     }
   }
 
@@ -148,7 +144,6 @@ $borderColor: rgba(255, 255, 255, 0.25);
     line-height: 19px;
     padding: 10px 30px;
     display: block;
-    // border-bottom: 2px solid #aaa !important;
     border-bottom: 2px solid #b9b8b8 !important;
     @include font-styles();
     font-size: 11.9975px;
@@ -169,36 +164,23 @@ $borderColor: rgba(255, 255, 255, 0.25);
   }
 }
 
-
 .account {
-
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 11.0032px;
-
+  @include font-styles();
   text-align: center;
-  letter-spacing: 3px;
   text-transform: uppercase;
-
-  color: #FFFFFF;
-
-  mix-blend-mode: normal;
   opacity: 0.5;
+  color: white;
 }
 
 .text_green {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 11.0032px;
+  @include font-styles();
   text-align: center;
-  letter-spacing: 3px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $text-color;
+  color: white;
 
   &:hover {
-    color: #FFFFFF;
+    color: $text-color;
   }
 
   .arrow {
@@ -208,22 +190,15 @@ $borderColor: rgba(255, 255, 255, 0.25);
       width: 23px;
       height: 20px;
       margin: 0px 2px -47px 36px !important;
-
     }
   }
-
 }
 
 .agreed {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 700;
+  @include font-styles();
   font-size: 10.9977px;
   line-height: 20px;
-  text-align: center;
-  letter-spacing: 3px;
   text-transform: uppercase;
-
   color: #EEEEEE;
 }
 
@@ -233,20 +208,12 @@ img {
 
 .switchs {
   .remember {
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
+    @include font-styles();
     font-size: 10.9977px;
     line-height: 13px;
-    /* identical to box height */
-
-    text-align: center;
-    letter-spacing: 3px;
     text-transform: uppercase;
-
     color: #EEEEEE;
   }
-
 
   .switch {
     position: relative;
@@ -269,7 +236,6 @@ img {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
     transition: .4s;
   }
 
@@ -281,21 +247,18 @@ img {
     left: 0px;
     bottom: -2px;
     background-color: white;
-    -webkit-transition: .4s;
     transition: .4s;
   }
 
-  input:checked+.slider {
+  input:checked + .slider {
     background-color: #2196F3;
   }
 
-  input:focus+.slider {
+  input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
   }
 
-  input:checked+.slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
+  input:checked + .slider:before {
     transform: translateX(26px);
   }
 
@@ -309,5 +272,4 @@ img {
   .slider.round:before {
     border-radius: 50%;
   }
-
 }

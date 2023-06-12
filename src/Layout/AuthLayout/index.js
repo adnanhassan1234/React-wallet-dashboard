@@ -63,9 +63,9 @@ const AuthLayout = ({ children }) => {
               ) : (
                 <>
                   <Form.Group className="form-group text-center my-3">
-                    <span className="account">Already did this? </span>
+                    <span className="account text-white">Already did this? </span>
                     <Link
-                      className="text_green"
+                      className="text_green text-white"
                       onClick={() => handleTabChange("login")}
                     >
                       login

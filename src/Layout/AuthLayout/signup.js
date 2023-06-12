@@ -62,7 +62,11 @@ const Signup = () => {
                   name=""
                   id=""
                   style={{ boxShadow: "none !important", background: "none" }}
-                /><span className="mx-2 mt-3 text-white agreed"> AGREED TO TERMS?</span>
+                />
+                <span className="mx-2 mt-3 text-white agreed">
+                  {" "}
+                  AGREED TO TERMS?
+                </span>
               </div>
             </div>
             <div className="img">

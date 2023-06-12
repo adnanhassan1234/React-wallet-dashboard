@@ -40,22 +40,20 @@ const Login = (props) => {
 
         <Form.Group className="form-group">
           <div className=" switchs d-flex justify-content-between">
-            <div className="d-flex" style={{marginLeft: '-17px'}}>
+            <div className="d-flex" style={{ marginLeft: "-17px" }}>
               <span className=" mt-3 text-white">
                 <div class="form-check form-switch d-flex">
-                  {/* <input
-                    class="form-check-input"
-                    type="checkbox"
-                    role="switch"
-                    id="flexSwitchCheckChecked"
-                  />
-                  <label class="form-check-label" for="flexSwitchCheckChecked">
-                    Remember me?
-                  </label> */}
                   <label class="switch">
-  <input type="checkbox" style={{boxShadow:'none !important', background:'none'}} />
-  <span class="slider round"> </span>
-</label>  <span className="remember">Remember me?</span>
+                    <input
+                      type="checkbox"
+                      style={{
+                        boxShadow: "none !important",
+                        background: "none",
+                      }}
+                    />
+                    <span class="slider round"> </span>
+                  </label>{" "}
+                  <span className="remember">Remember me?</span>
                 </div>
               </span>
             </div>
