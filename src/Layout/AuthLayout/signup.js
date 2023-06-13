@@ -59,12 +59,10 @@ const Signup = () => {
               <div class="form-check d-flex">
                 <input
                   type="checkbox"
-                  name=""
-                  id=""
-                  style={{ boxShadow: "none !important", background: "none" }}
+                  class="custom-checkbox"
+                  style={{ boxShadow: "none !important"}}
                 />
                 <span className="mx-2 mt-3 text-white agreed">
-                  {" "}
                   AGREED TO TERMS?
                 </span>
               </div>
